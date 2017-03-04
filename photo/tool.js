@@ -1,6 +1,6 @@
  "use strict";
     var fs = require("fs");
-    var path = "../photos";
+    var path = "../../photos";
 
     fs.readdir(path, function (err, files) {
         if (err) {
@@ -9,7 +9,7 @@
         let arr = [];
         (function iterator(index) {
             if (index == files.length) {
-                fs.writeFile("../photo/output.json", JSON.stringify(arr, null, "\t"));
+                fs.writeFile("output.json", JSON.stringify(arr, null, "\t"));
 				console.log('get img success!');
                 return;
             }
